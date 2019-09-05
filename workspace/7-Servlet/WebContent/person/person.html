@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/7-Servlet/PersonServlet" method="get"> <!-- 1.이름(/7-Servlet/PersonServlet)을 주면서 톰캣서버에 결과를 달라고요청 -->
+		<div style="border: 1px solid lightgray;">
+			<table border="1">
+				<tr>
+					<td><label>이름</label></td>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<td>성별</td>
+					<td>
+					   <input type ="radio" name ="gender" value ="0" checked>남
+					   <input type ="radio" name ="gender" value ="1">여
+					</td>
+				</tr>
+				<tr>
+					<td>취미</td>
+					<td>
+					   <input type ="checkbox" name ="hobby" value ="독서">독서
+					   <input type ="checkbox" name ="hobby" value ="영화">영화
+					   <input type ="checkbox" name ="hobby" value ="음악">음악
+					   <input type ="checkbox" name ="hobby" value ="게임">게임
+					   <input type ="checkbox" name ="hobby" value ="쇼핑">쇼핑
+					</td>
+				</tr>
+				<tr>
+					<td>색깔</td>
+					<td>
+					   <select name ="color" style ="width: 100px;">
+					      <option value ="red">빨강</option>
+					      <option value ="green">녹색</option>
+					      <option value ="blue">파랑</option>
+					      <option value ="magenta">보라</option>
+					      <option value ="cyan">하늘</option>
+					   </select>
+					</td>
+				</tr>
+				<tr>
+					<td>과목</td>
+					<td>
+					  <select name ="subject" size ="5" style ="width: 100px;" multiple>
+					      <option value ="JAVA">JAVA</option>
+					      <option value ="JSP">JSP</option>
+					      <option value ="Spring">Spring</option>
+					      <option value ="jQuery">jQuery</option>
+					      <option value ="Servlet">Servlet</option>
+					  </select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align= "center">
+					  <input type ="submit" value ="SEND">
+					  <input type = "reset" value = "CANCEL">
+					</td>
+
+				</tr>
+			</table>
+		</div>
+	</form>
+</body>
+</html>

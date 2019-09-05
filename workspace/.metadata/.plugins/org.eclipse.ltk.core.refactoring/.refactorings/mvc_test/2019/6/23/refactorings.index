@@ -1,0 +1,7 @@
+1559611046860	Rename package 'board.dao'
+1559611055600	Rename package 'scor.dao'
+1559611064253	Rename package 'boardbean'
+1559611076417	Rename package 'board.controller'
+1559615787695	Delete element
+1559616038989	Rename resource 'mvc_score'
+1559627146394	Move 'property' to 'WebContent'

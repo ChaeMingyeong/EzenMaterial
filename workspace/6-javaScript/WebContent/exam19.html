@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+     function doPrint() {
+		//document.getElementById("myid").innerHTML = "스크립트가 실행되었습니다.";
+		var h2Tag = document.getElementsByName("myid");
+		h2Tag[0].innerHTML = "TEST1";
+		h2Tag[1].innerHTML = "TEST2";
+		h2Tag[2].innerHTML = "TEST3";
+	}
+</script>
+</head>
+<body>  <!-- 아이디는 태그하나당 한개만 쓰는 것을 권장, 태그 여러가지에 똑같은 옵션은 클래스 권장 -->
+        <!-- 이름은 똑같아도 태그가 전부 변한다.  -->
+<h2 id = "myid" name ="myid">안녕하세요</h2>
+<h2 id = "myid" name ="myid">자바스크립트 입니다</h2>
+<h2 id = "myid" name ="myid">강의 참 재미있죠?</h2>
+<a href = "#" onclick = "doPrint()">자바스크립트 함수 호출하기</a>
+</body>
+</html>

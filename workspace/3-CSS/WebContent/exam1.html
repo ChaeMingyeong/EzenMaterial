@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>화면분할</title>
+<style type ="text/css">
+/* css 영역에서의 주석 
+   css 사용 목적 : 태그를 꾸미기,
+   css 태그 선택방법 : 1. 태그이름을 직접 사용 
+                   2. class, id 사용 
+*/  /*중괄호 안에다가 설정값*/
+ /* 화면 초기화 */
+
+
+html, body{ 
+   margin: 0;      /* 태그 기준으로 바깥쪽 여백 */
+   padding: 0;    /*  태크 기준으로 안쪽 여백 */
+   height: 100%; 
+}
+#header {  /* id 속성의 태그 표현 (아이디가 header인 태크)*/
+   width : 100%;   /*화면 크기와 똑같이! */
+   height : 15%;
+   background : yellow
+}
+
+#nav{
+  width : 15%;
+  height: 70%;
+  background : orange;
+  float:left;
+}
+#section{
+  width : 70%;
+  height: 70%;
+  background : olivedrab;
+  float:left;
+}
+#aside{
+  width : 15%;
+  height: 70%;
+  background : orange;
+  float:left;
+}
+#footer{
+  width : 100%;
+  height: 15%;
+  background : plum;
+  clear: both;
+}
+</style>
+</head>
+<body>
+<!-- HTML5 문서구조 시맨틱 태그 사용  --> <!-- <div>대신에 태그 이름으로  --> 
+<header id ="header">header</header>
+<nav id = "nav">nav</nav>
+<section id ="section">section</section>
+<aside id = "aside">aside</aside>
+<footer id = "footer">footer</footer>
+</body>
+</html>

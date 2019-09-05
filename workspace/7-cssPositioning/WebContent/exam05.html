@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 12px Tahoma, sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+/*리스트할때 점이든 숫자든 포시하지 말기*/
+#wrap {
+	width: 800px;
+	margin: auto;
+	background-color: silver;
+}
+
+#header {
+	background-color: red;
+}
+
+#container {
+	background-color: cyan;
+}
+
+.nav {
+	float: left;
+	width: 180px;
+	background-color: lime;
+}
+
+.content {
+	float: right;
+	width: 620px;
+	background-color: yellowgreen;
+}
+
+/* clear를 지정한 위치가 float를 지정한 뒤에 float가 지정된 박스를
+감싸고 있는 <div>가 끝나기전(#container:after)이다 
+이렇게 작성하면 #container 영역에 배경을 비롯한 여러가지 박스모델 속성들이
+ 제대로 나타난다. */
+#container:after {
+	content: "ssss";
+	display: block;
+	clear:both;
+}
+
+#footer {	
+	margin-top: 30px;
+	background-color: green;
+}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1>LOGO</h1>
+			<p>This website is ...</p>
+		</div>
+
+
+		<div id="container">
+			<div class="nav">
+				<h2>Navigation</h2>
+				<ul>
+					<li><a href="#">menu 1</a></li>
+					<li><a href="#">menu 2</a></li>
+					<li><a href="#">menu 3</a></li>
+				</ul>
+			</div>
+
+			<div class="content">
+
+				<h2>Content Title</h2>
+				<p>Lorem ipsum dolor sit amet, cum splendide delicatissimi id.
+					Id vix dolores adversarium. Eos unum patrioque ei, usu ei primis
+					honestatis. Mea option ceteros delicatissimi te, ut suas delenit
+					cum. Affert assentior definitiones ea mea, sententiae consectetuer
+					interpretaris vix et. Nam ei posse augue nonumy, mundi putant
+					dolores vis an. Et nec mandamus gloriatur. Pri sapientem prodesset
+					definitiones ea. Stet minimum ne eos. Melius meliore ad sed, in
+					omittam convenire his, quo ad semper ullamcorper. Per dico luptatum
+					ea, ei suas iusto appareat sed.</p>
+			</div>
+		</div>
+				
+		
+		<div id="footer">
+
+			<address>Seoul, Korea</address>
+		</div>
+	</div>
+
+</body>
+</html>

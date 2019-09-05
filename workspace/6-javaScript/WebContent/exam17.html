@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function insertQuestion() {
+		var q = prompt("사칙연산의 수식을 입력하세요. (예: 100 + 50)", "");
+	    var answer = eval(q); //문자열을 수식으로 변환
+	    var result = q + "=" + answer;
+	    
+	    document.getElementById("question").innerHTML = result;
+	  
+	}
+</script>
+</head>
+<!-- HTML 페이지가 처음 열렸을 때 , 웹브라우저가 HTML 태그의 인식을 완료된 직 후, 
+     onload 속성이 동작됨 -->
+<body onload="insertQuestion()">
+	<h2 id = "question">테스트</h2>
+	<!-- onload속성에서는 body쪽에서 어떤 동작이 다 이뤄진 직후 , 그 동작이 끝나게 되었을 때 onload 가 동작됨  -->
+</body>
+</html>

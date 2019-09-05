@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type = "text/css" rel="stylesheet"  
+    href ="css/join.css">
+</head>
+<body>
+<p>게시판 글 올리기</p>
+<form action="../miniboard/community/community_insert.jsp" name="input_com" method="post">
+     <fieldset>
+			<legend>게시판 글올리기</legend>
+			<div>
+				<label>이름 : </label> <input type="text" name="user_name" id="user_name">
+			</div>
+			
+			<div>
+				<label> 비밀번호 </label><input type="password" name="user_pwd" id="user_pwd">
+			</div>
+			
+			<div>
+				<label> 이메일</label> <input type="text" name="email" id="email">
+			</div>
+			
+			<div>
+				<label> 제목 </label><input type="text" name="subject" id="subject">
+			</div>
+			<div>
+				<label> 내용 </label><br>
+				<textarea  name="content" id="content" rows="10" cols="45"></textarea>
+			</div>
+			<div>
+				<input type="submit" value="입력완료"> 
+				<input type="reset" value="다시작성">
+			</div>
+		</fieldset>
+ 
+
+  
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="check.js">
+   
+</script>
+</head>
+<body>
+<form action="" name ="frm"> <!-- 입력태그는 클라이언트가 서버에 요청할 때 파일로 날라가기 위해 form태그 안에 있어야함  -->
+   <fieldset>
+       <legend>회원가입</legend>
+       
+       <label>이름</label>
+       <input type ="text" name ="user_name"><br>
+       <label>성별</label>
+       <input type ="radio" name ="gender" value= "M">남자
+       <input type ="radio" name ="gender" value= "F">여자<br>
+       <label>직업</label>
+       <select name = "job">
+          <option>--- 선택하세요 ---</option> 
+          <option value ="dev">프로그래머</option> 
+          <option value ="pub">퍼블리셔</option> 
+       </select><br>
+       <label>취미</label>
+       <input type ="checkbox" name="hobby" value ="축구">축구
+       <input type ="checkbox" name="hobby" value ="농구">농구
+       <input type ="checkbox" name="hobby" value ="야구">야구 <br>
+                         
+       <label>메모</label>
+       <textarea rows="3" cols="50" name="memo" >
+                
+       </textarea><br>
+                                                               <!-- 자바스크립코드나 함수호출 -->
+       <input type ="button" name ="button1" value ="제출" onclick="doSubmit();">
+       <input type ="button" name ="button2" value ="리셋">
+   </fieldset>
+</form>
+</body>
+</html>

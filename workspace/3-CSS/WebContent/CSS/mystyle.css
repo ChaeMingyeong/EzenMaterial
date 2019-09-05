@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* 화면 초기화 */
+body{
+	background : linen;
+	color : blueviolet;
+	margin-left: 30px;
+	margin-right: 30px;
+	
+}
+h3{
+	text-align: center;
+	color: darkred;
+	margin-left: 30px;
+	margin_right: 30px;
+}

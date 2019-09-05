@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+     function printTime() {
+    	
+         
+		 //현재시간 구하기
+		var days = ["일", "월", "화", "수", "목", "금", "토"];
+		var mydate = new Date(); //내장객체를 만들고 현재시간 추출
+		var yy = mydate.getFullYear();
+		var mm = mydate.getMonth() + 1;
+		var dd = mydate.getDate();
+		var hh = mydate.getHours();
+		var mi = mydate.getMinutes();
+		var ss = mydate.getSeconds();
+		var i = mydate.getDay(); //요일수,  "일" = 0 ~ "토" = 6
+		var day = days[i];      //요일 
+		
+		//완성된 현재 시각
+		var result = yy + "-" + mm + "-" + dd + " " + day + "요일" + hh + ":" + mi + ":" + ss;
+		document.getElementById("timer").innerHTML = result;
+	
+	}
+     
+     function startTimer() {
+    	 //printTime 함수를 1초에 한번씩 반복해서 자동 호출 
+		setInterval(printTime, 1000) //함수이름, 밀리세컨 
+	}
+</script>
+</head>
+<body onload = "startTimer()">
+   <h2 id = "timer"></h2>
+</body>
+</html>

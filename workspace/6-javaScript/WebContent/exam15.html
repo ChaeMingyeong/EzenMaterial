@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+   function sum(x,y) {
+	 return x + y;
+  }
+   function printResult() {
+	 var result = sum(10, 50);
+	 // 태그 선택하기1 : id 속성 이용
+	 //var mytag= document.getElementById("question"); //현재 이 document가 속해있는 페이지를 관리하는 내장객체 
+	 //mytag.innerHTML = result;    
+	 // 태그 선택하기2 : name 속성 이용 (배열사용)
+	 var mytag = document.getElementsByName("question");
+	 mytag[0].innerHTML = result;
+  }
+</script>
+</head>
+<body>
+ <h2>10 + 50 = <span name ="question" id="question">?</span></h2>
+ <input type = "button" value = "결과보기" onclick ="printResult()" >  
+</body>
+</html>

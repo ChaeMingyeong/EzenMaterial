@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>          <!-- 1.이름(/7-Servlet/ParamServlet)을 주면서 톰캣서버에 결과를 달라고요청 -->
+<form action="/7-Servlet/ParamServlet" method ="post">  <!-- html문서가 아닌 서블릿 클래스의  이름  + 주의 ;요청할때 프로젝트 이름과 같이 보내야됨-->
+  <table border ="1">
+     <tr>
+        <td width ="70" align="center">이름</td>
+        <td><input type ="text" name ="name"></td>
+     </tr>
+     <tr>
+        <td align="center">나이</td>
+        <td><input type ="text" name = "age"></td>    
+     </tr>
+     <tr>
+        <td colspan ="2" align ="center">
+           <input type ="submit" value ="보내기">
+           <input type ="reset" value ="취소">
+        </td>
+     </tr>
+  </table>
+</form>
+</body>
+</html>

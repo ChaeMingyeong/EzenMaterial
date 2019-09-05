@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+   //eval
+   document.write("<h2>eval 내장함수<h2>")
+   var str = "100 + 5";
+   document.write(str + "<br>");
+   var result = eval(str); //문자열에 있는 수식을 계산 
+   document.write(result + "<br>");
+   
+   //Number, parseInt
+    document.write("<h2>Number, parseInt 내장함수 <h2>");
+   var value = "100"; 
+   var num1 = Number(value);
+   var num2 = parseInt(value);
+   var r1 = value + 1; //문자열 결합방식으로 인해 1001이 출력됨 
+   var r2 = num1 + 1;
+   var r3 = num2 + 1;
+   document.write("r1 = " +  r1 + "<br>");
+   document.write("r2 = " +  r2 + "<br>");
+   document.write("r3 = " +  r3 + "<br>");
+   
+   
+   var value = "100.5"; 
+   var num1 = Number(value);
+   var num2 = parseInt(value); //소수점 걍 버림 
+   var r1 = value + 1; //문자열 결합방식으로 인해 1001이 출력됨 
+   var r2 = num1 + 1;
+   var r3 = num2 + 1;
+   document.write("r1 = " +  r1 + "<br>");
+   document.write("r2 = " +  r2 + "<br>");
+   document.write("r3 = " +  r3 + "<br>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

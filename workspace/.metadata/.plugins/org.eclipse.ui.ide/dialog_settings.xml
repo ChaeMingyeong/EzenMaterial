@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\android_3rd_mingyeong\jsp\workspace"/>
+			<item value="D:\android_3rd_mingyeong\jsp\workspace\11-board_teacher"/>
+			<item value="D:\android_3rd_mingyeong\jsp\workspace\webprac1"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="D:\android_3rd_mingyeong\jsp\workspace\29-jQueryEvent\WebContent\exam01.jsp"/>
+			<item value=""/>
+		</list>
+	</section>
+</section>

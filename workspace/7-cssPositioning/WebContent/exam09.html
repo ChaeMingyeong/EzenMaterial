@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type ="text/css">
+div{position: absolute;}
+
+img{
+   width:100px; height:140px;
+   position: absolute;
+}
+#spadeA {z-index: -3; left: 10px; top: 20px;}
+#spade2 {z-index: 2; left: 40px; top: 30px;}
+#spade3 {z-index: 3; left: 80px; top: 40px;}
+#spade7 {z-index: 7; left: 120px; top: 50px;}
+#spadeA:hover{z-index:10;}
+#spade2:hover{z-index:10;}
+#spade3:hover{z-index:10;}
+#spade7:hover{z-index:10;}
+
+
+</style>
+</head>
+<body>
+<h3>z-index 프로퍼티</h3>
+<hr>
+<div>
+   <img alt ="스페이드A" src="img1/spade-A.png" id="spadeA">
+   <img alt ="스페이드2" src="img1/spade-2.png" id="spade2">
+   <img alt ="스페이드3" src="img1/spade-3.png" id="spade3">
+   <img alt ="스페이드7" src="img1/spade-7.png" id="spade7"> 
+</div>
+</body>
+</html>

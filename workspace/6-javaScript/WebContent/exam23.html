@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	/* 새창 띄우기*/
+	function open1() {
+       window.open("open.html");
+	}
+	/* 클릭할 때마다 창이 새로 열리는 팝업창*/
+	function open2() {
+       window.open("open.html", "", "width=300, height = 500, scrollbars = yes, toolbar = yes, status = no, location = no, fullscreen = no");
+	}
+    /* 한번 생성된 팝업창을 지속적으로 재사용하는 팝업창*/
+	function open3(url) {
+        window.open(url, 'mywin', 'width = 500, height = 300, scrollbars= yes, menubar = yes, status = yes, location = yes, resizable = yes');
+	}
+	function open4() {
+	       window.open("open.html", "mywin", "width=1300", "height = 300");
+		}
+    
+    /*큰따옴표를 쓰던 작은따옴표를 쓰던 상관없다.*/
+</script>
+</head>
+<body>
+	<h1>window 객체</h1>
+	<h3>open 메소드 확인</h3>
+	<div>
+	    <!-- return false;를 사용하는 이유는 <a>태그의 href 속성을 무효화 시키는 것  -->
+		<a href="#" onclick="open1(); ">새창열기</a><br>
+		 <a	href="http://www.naver.com" onclick="open2(); return false">팝업창열기(1)</a><br> 
+		 <a	href="#" onclick="open3('http://www.naver.com'); ">팝업창열기(2-1)</a><br>
+		<a href="#" onclick="open3('http://www.daum.net'); return false;">팝업창열기(2-2)</a><br>
+		<<a href="#" onclick="open4(); return false;">팝업창열기(1)</a><br>
+	</div>
+</body>
+</html>

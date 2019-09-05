@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    //함수의 선언 및 정의
+    
+    function sayHello() {
+		document.write("<h2>안녕하세요. <h2>");
+		document.write("<h2>자바스크립트. <h2>");
+	}
+    
+    sayHello();
+    sayHello();
+    
+    function f(x) { //매개변수 : 전달된값 저장
+    	                //자료형(var)은 매개변수에 쓰지 않음
+		var y = x + 1;
+        document.write("<h2>" + y + "<h2>");
+	}
+    
+    function f1(x,y) { //javascript는 자료형의 종류가 하나기 때문에 리턴자료형을 굳이 
+		var z = x+y;
+		if(z<10){
+			return;
+		}
+		return z;
+	}
+    
+    //함수만들기 다른 방법 
+    var f2 = function (x,y) {
+		return x+y;
+		
+	}
+    
+    //함수의 호출
+    
+    f(2);
+    f(5);
+    f(10);
+    document.write("<h2>" + f1(2,1) + "<h2>");
+    document.write("<h2>" + f1(2,14) + "<h2>");
+    document.write("<h2>" + f2(20,10) + "<h2>");
+ 
+  
+</script>
+</head>
+<body>
+
+</body>
+</html>

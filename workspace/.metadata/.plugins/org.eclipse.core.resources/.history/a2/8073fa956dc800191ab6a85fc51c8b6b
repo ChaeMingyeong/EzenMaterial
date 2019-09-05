@@ -1,0 +1,104 @@
+package member2.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import member2.bean.MemberDTO;
+
+public class memberDAO {
+
+	String driver = "oracle.jdbc.driver.OracleDriver";
+	String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	String username = "jspexam";
+	String password = "m1234";
+
+	Connection conn;
+	PreparedStatement pstmt;
+	ResultSet rs;
+	
+	
+	public memberDAO() {
+		try {
+			Class.forName(driver);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public Connection getConnection() {
+
+		try {
+			conn = DriverManager.getConnection(url, username, password);
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		return conn;
+	}
+	
+	
+	public void close() {
+		try {
+			if (rs != null)
+				rs.close();
+			if (pstmt != null)
+				pstmt.close();
+			if (conn != null)
+				conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public int memberWrite(MemberDTO memberDTO) {
+		int result = 0;
+		String sql = "insert into member2 values (?,?,? ,?, sysdate, ?)";
+		conn = getConnection();
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memberDTO.getPhone());
+			pstmt.setString(2, memberDTO.getName());
+			pstmt.setString(3, memberDTO.getFileURL());
+			pstmt.setString(4, memberDTO.getAddr());
+			pstmt.setString(5, memberDTO.getEmail());
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return result;
+	}
+	
+	
+	public List<MemberDTO> memberlist() {
+		List<MemberDTO> list = new ArrayList<MemberDTO>();
+		String sql = "select * from member2 order by logtime";
+		conn = getConnection();
+		try {
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				MemberDTO memberDTO = new MemberDTO();
+				memberDTO.setPhone(rs.getString("phone"));
+				memberDTO.setName(rs.getString("name"));
+				memberDTO.setFileURL(rs.getString("fileURL"));
+				memberDTO.setAddr(rs.getString("addr"));
+				memberDTO.setLogtime(rs.getString("logtime"));
+				memberDTO.setEmail(rs.getString("email"));	
+				list.add(memberDTO);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return list;
+	}
+
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+   display: inline-block;
+   position: absolute;  /*absolute는 자기 자신을 기준으로 상대적으로 움직임 */
+   border: 1px solid lightgray;
+}
+div > p {
+  display: inline-block;
+  position: absolute;
+  width : 15px; height : 20px;
+  background-color: lightgray;
+}
+
+</style>
+</head>
+<body>
+<h3>Merry Chrismas!!</h3>
+<hr>
+<p>메리 크리스마스!!!</p>
+<div>
+    <img alt ="크리스마스" src ="img1/christmastree.png"
+        width = "200"  height ="200">
+    <p style ="left: 50px; top: 30px;">M</p>   <!-- left를 기준으로, top을 기준으로 움직임 -->
+    <p style ="left: 100px; top: 0px;">E</p>
+    <p style ="left: 100px; top: 80px;">R</p>
+    <p style ="left: 15px; top: 110px;">R</p>
+    <p style ="left: 50px; top: 30px;">Y</p>
+</div>
+</body>
+</html>
